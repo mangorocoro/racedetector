@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+ 
+<head>
+    <title>Answer</title>
+    <link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="http://getbootstrap.com/examples/jumbotron-narrow/jumbotron-narrow.css" rel="stylesheet">
+</head>
+ 
+<body>
+ 
+    <div class="container">
+        <h3 class="text-muted" align="center"><a href="http://127.0.0.1:5000/">Race Detector</a></h3>
+        
+ 
+        <div class="jumbotron">
+            
+        <img src="{{filepath}}" alt="asian picture" style="width:304px;height:228px;">
+
+            {% if ethnicity_string == 'korean' %}
+            <h1> KOREAN </h1>
+            {% elif ethnicity_string == 'chinese' %}
+            <h1> CHINESE </h1>
+            {% elif ethnicity_string == 'japanese' %}
+            <h1> JAPANESE </h1>
+            {% endif %}
+
+        </div>
+ 
+    </div>
+</body>
+ 
+</html>

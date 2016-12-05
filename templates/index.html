@@ -1,0 +1,66 @@
+<!DOCTYPE>
+
+<html>
+    <head>
+        <title>Race Detection</title> 
+        <link rel="stylesheet" type="text/css" 
+            href="{{ url_for('static', filename='carousel.css') }}">
+
+        <script type="text/javascript" 
+            src= "{{ url_for('static', filename='carousel.js') }}"> </script>
+        <script src="{{ url_for('static', filename='jquery-3.1.1.min.js') }}"> </script>
+
+    </head>
+
+    <body>
+        <center>
+            <h1 class="header" style="font-family:courier;"> <a href="http://127.0.0.1:5000/" > Race Detection</a></h1>
+
+            <br/> <br/>
+        
+            <div class="container">
+              <div class="carousel">
+                <div class="item a"> <p>korean</p></div>
+                <div class="item b"> <p>japanese</p></div>
+                <div class="item c"> <p>chinese</p></div>
+              </div>
+            </div>
+            <div class="next"> <p class="button"> Next</p></div>
+            <div class="prev"> <p class="button"> Prev</p></div>
+
+        </center>
+
+        <form action="" method=post enctype=multipart/form-data>
+            <p>
+                <input type=file name=file>
+                <input type=submit value=Upload>
+            </p>
+        </form>
+
+    </body>
+
+
+    <script type="text/javascript">
+        var carousel = $(".carousel"),
+        currdeg  = 0;
+
+        $(".next").on("click", { d: "n" }, rotate);
+        $(".prev").on("click", { d: "p" }, rotate);
+
+        function rotate(e){
+          if(e.data.d=="p"){
+            currdeg = currdeg - 120;
+          }
+          if(e.data.d=="n"){
+            currdeg = currdeg + 120;
+          }
+          carousel.css({
+            "-webkit-transform": "rotateY("+currdeg+"deg)",
+            "-moz-transform": "rotateY("+currdeg+"deg)",
+            "-o-transform": "rotateY("+currdeg+"deg)",
+            "transform": "rotateY("+currdeg+"deg)"
+          });
+        }
+    </script>
+
+</html>

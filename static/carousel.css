@@ -1,0 +1,96 @@
+body {
+  background: white;
+  padding: 70px 0;
+  font: 15px/20px Arial, sans-serif;
+}
+
+.container {
+  margin: 0 auto;
+  width: 250px;
+  height: 200px;
+  position: relative;
+  perspective: 1000px;
+}
+
+.carousel {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  transform-style: preserve-3d;
+  transition: transform 1s;
+}
+
+.item {
+  display: block;
+  position: absolute;
+  background: #000;
+  width: 250px;
+  height: 250px;
+  opacity: 0.95;
+  border-radius: 10px;
+}
+
+p {
+    line-height: 420px;
+    font-size: 24px;
+    font-style: italic;
+    text-align: center;
+    color: #FFF;
+    opacity: .9;
+    text-transform: uppercase;
+}
+
+.button {
+    font-size: 12px;
+    text-align: center;
+    color: white;
+    text-transform: uppercase;
+    line-height: 12px;
+}
+
+.header {
+    /*font-size: 38px;*/
+    font: 36px Arial;
+    text-align: center;
+    color: black;
+    text-transform: uppercase;
+    font-weight: bold;
+    /*font-style: italic;*/
+}
+
+.a {
+  transform: rotateY(0deg) translateZ(250px);
+  background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShLEhZw9py8tjHJEI7Fb6w0kMrdjFIDANoTzDNByx31hp5dnH1fQ);
+  background-size: cover;
+  
+}
+.b {
+  transform: rotateY(120deg) translateZ(250px);
+  background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShLEhZw9py8tjHJEI7Fb6w0kMrdjFIDANoTzDNByx31hp5dnH1fQ);
+  background-size: cover;
+}
+.c {
+  transform: rotateY(240deg) translateZ(250px);
+  background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShLEhZw9py8tjHJEI7Fb6w0kMrdjFIDANoTzDNByx31hp5dnH1fQ);
+  background-size: cover;
+}
+
+.next, .prev {
+  color: white;
+  position: absolute;
+  top: 270px;
+  padding: 1em 2em;
+  cursor: pointer;
+  background: grey;
+  border-radius: 5px;
+  border-top: 1px solid #FFF;
+  box-shadow: 0 5px 0 #999;
+  transition: box-shadow 0.1s, top 0.1s;
+}
+.next:hover, .prev:hover { color: #000; }
+.next:active, .prev:active {
+  top: 274px;
+  box-shadow: 0 1px 0 #999;
+}
+.next { right: 17em; }
+.prev { left: 17em; }
